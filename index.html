@@ -58,9 +58,9 @@
         <section class="outros-produtos">
             <h2 class="outros-produtos__titulo">nossos outros produtos</h2>
             <article class="carousel">
-                <button class="carousel__botao carousel__botao--anterior" aria-label="Botão de voltar"></button>
-                <button class="carousel__botao carousel__botao--proximo" aria-label="Botão de avançar"></button>
-                <ul class="carousel__lista-produtos">
+                <button class="carousel__botao carousel__botao--anterior" data-anterior aria-label="Botão de voltar"></button>
+                <button class="carousel__botao carousel__botao--proximo" data-proximo aria-label="Botão de avançar"></button>
+                <ul class="carousel__lista-produtos" data-lista-produtos>
                     <a href="#" class="carousel__produto">
                         <li class="carousel__imagem-container"><img src="assets/img/produto1.png" alt="" class="carousel__imagem"></li>
                     </a>
@@ -77,7 +77,7 @@
                         <li class="carousel__imagem-container"><img src="assets/img/produto5.png" alt="" class="carousel__imagem"></li>
                     </a>
                 </ul>
-                <div class="carousel__indicadores">
+                <div class="carousel__indicadores" data-navegacao>
                     <button class="carousel__indicador carousel__indicador--ativo" aria-label="Slide 1"></button>
                     <button class="carousel__indicador" aria-label="Slide 2"></button>
                     <button class="carousel__indicador" aria-label="Slide 3"></button>
