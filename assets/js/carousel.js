@@ -5,8 +5,28 @@ export class Carousel {
         this.listaProdutos = document.querySelector(listaProdutos)
         this.navegacao = document.querySelector(navegacao)
 
-        console.log(this.listaProdutos)
-        console.log('---------------------------')
-        console.log(this.navegacao)
+        this.slides = this.getListaSlides()
+        this.indicadores = this.getListaIndicadores()
+        this.tamanhoSlide = this.getTamanhoSlide()
+
+        this.preparaSlides()
+    }
+
+    getListaSlides() {
+        return Array.from(this.listaProdutos.children)
+    }
+
+    getListaIndicadores() {
+        return Array.from(this.navegacao.children)
+    }
+
+    getTamanhoSlide() {
+        return this.slides[0].getBoundingClientRect().width
+    }
+
+    preparaSlides() {
+        this.slides.forEach((slide, i) => {
+            slide.style.left = this.tamanhoSlide * i + 'px'
+        })
     }
 }
